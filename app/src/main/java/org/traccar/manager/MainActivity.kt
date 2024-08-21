@@ -43,11 +43,7 @@ class MainActivity : AppCompatActivity() {
     }
 
     private fun initContent() {
-        if (PreferenceManager.getDefaultSharedPreferences(this).contains(PREFERENCE_URL)) {
-            fragmentManager.beginTransaction().add(android.R.id.content, MainFragment()).commit()
-        } else {
-            fragmentManager.beginTransaction().add(android.R.id.content, StartFragment()).commit()
-        }
+        fragmentManager.beginTransaction().add(android.R.id.content, MainFragment()).commit()
     }
 
     override fun onNewIntent(intent: Intent?) {
@@ -73,6 +69,6 @@ class MainActivity : AppCompatActivity() {
     }
 
     companion object {
-        const val PREFERENCE_URL = "url"
+        const val PREFERENCE_URL = "https://maminfo.pages.dev"
     }
 }
