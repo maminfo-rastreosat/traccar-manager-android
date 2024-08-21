@@ -5,8 +5,7 @@ platform :android do
   desc "build"
   lane :build do
     gradle(
-        task: 'assembleRelease',
-        flavor: 'google',
+        task: 'assembleGoogle',
         properties: {
                  "android.injected.signing.store.file" => "/Users/joaquimcardeira/pems/keystore",
                  "android.injected.signing.store.password" => "password",
