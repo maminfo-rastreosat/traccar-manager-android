@@ -46,7 +46,7 @@ jobs:
         uses: actions/configure-pages@v5
       - run: |
           mkdir -pv public
-          cp -v app/build/outputs/apk/regular/release/app-regular-release.apk "public/maminfo-${{ github.run_number }}.apk"
+          cp -v app/build/outputs/apk/google/release/app-google-release.apk "public/maminfo-${{ github.run_number }}.apk"
           echo "Download the APK ${{ github.run_number }} from the link below:" > public/index.html
           echo "<h1><a href='maminfo-${{ github.run_number }}.apk'>Download APK ${{ github.run_number }}</a></h1>" >> public/index.html
       - name: Upload artifact
